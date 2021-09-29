@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Homework_007</string>
+    <string name="wrong_email">wrong email type</string>
+
 </resources>

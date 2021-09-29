@@ -11,74 +11,72 @@
         android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/california_sun"
         android:text="Welcome"
         android:textColor="@color/black"
         android:textSize="60sp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tVTo"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="@id/gdStart"
         app:layout_constraintEnd_toEndOf="@id/gdEnd"
-        />
+        app:layout_constraintStart_toStartOf="@id/gdStart"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
 
         android:id="@+id/tVTo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-app:layout_constraintTop_toBottomOf="@id/welcome"
-
         android:text="To"
 
-        app:layout_constraintBottom_toTopOf="@id/iVLogo"
-
         android:textColor="@color/black"
+
         android:textSize="@dimen/font_height"
+
+        app:layout_constraintBottom_toTopOf="@id/iVLogo"
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
         app:layout_constraintStart_toStartOf="@id/gdStart"
-        app:layout_constraintEnd_toEndOf="@id/gdEnd" />
+        app:layout_constraintTop_toBottomOf="@id/welcome" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iVLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_sam_logo"
-        app:layout_constraintTop_toBottomOf="@id/tVTo"
-        app:layout_constraintStart_toStartOf="@id/gdStart"
-        app:layout_constraintEnd_toEndOf="@id/gdEnd"
         app:layout_constraintBottom_toTopOf="@id/tvSharemac"
-        />
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
+        app:layout_constraintStart_toStartOf="@id/gdStart"
+        app:layout_constraintTop_toBottomOf="@id/tVTo"
+        app:srcCompat="@drawable/ic_sam_logo" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvSharemac"
         android:layout_width="wrap_content"
-app:layout_constraintTop_toBottomOf="@id/iVLogo"
-        app:layout_constraintBottom_toTopOf="@id/tVServiceApp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/terminator"
         android:text="SHAREMAC"
-
-
         android:textColor="@color/black"
-
-
         android:textSize="24sp"
+
+
+        app:layout_constraintBottom_toTopOf="@id/tVServiceApp"
+
+
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
         app:layout_constraintStart_toStartOf="@id/gdStart"
-        app:layout_constraintEnd_toEndOf="@id/gdEnd" />
+        app:layout_constraintTop_toBottomOf="@id/iVLogo" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tVServiceApp"
         android:layout_width="wrap_content"
-app:layout_constraintTop_toBottomOf="@id/tvSharemac"
-        app:layout_constraintBottom_toTopOf="@id/eTEmail"
         android:layout_height="wrap_content"
         android:text="Service App"
-
-
         android:textColor="@color/black"
         android:textSize="@dimen/font_height"
+
+
+        app:layout_constraintBottom_toTopOf="@id/eTEmail"
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
         app:layout_constraintStart_toStartOf="@id/gdStart"
-        app:layout_constraintEnd_toEndOf="@id/gdEnd" />
+        app:layout_constraintTop_toBottomOf="@id/tvSharemac" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/eTEmail"
@@ -88,12 +86,14 @@ app:layout_constraintTop_toBottomOf="@id/tvSharemac"
         android:drawableStart="@drawable/ic_email"
         android:hint="  Email"
         android:paddingStart="20dp"
-app:layout_constraintTop_toBottomOf="@id/tVServiceApp"
         app:layout_constraintBottom_toTopOf="@id/eTPassword"
-        app:layout_constraintStart_toStartOf="@id/gdStart"
         app:layout_constraintEnd_toEndOf="@id/gdEnd"
+        app:layout_constraintStart_toStartOf="@id/gdStart"
+        app:layout_constraintTop_toBottomOf="@id/tVServiceApp"
+        android:inputType="text"
 
-        tools:layout_editor_absoluteY="371dp" />
+
+        />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/eTPassword"
@@ -103,12 +103,13 @@ app:layout_constraintTop_toBottomOf="@id/tVServiceApp"
         android:drawableStart="@drawable/ic_key"
         android:drawableEnd="@drawable/ic_closed_eye"
         android:hint="  Password"
+        android:inputType="textPassword"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-app:layout_constraintTop_toBottomOf="@id/eTEmail"
         app:layout_constraintBottom_toTopOf="@id/tVOr"
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
         app:layout_constraintStart_toStartOf="@id/gdStart"
-        app:layout_constraintEnd_toEndOf="@id/gdEnd" />
+        app:layout_constraintTop_toBottomOf="@id/eTEmail" />
 
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -117,10 +118,10 @@ app:layout_constraintTop_toBottomOf="@id/eTEmail"
 
         android:layout_height="wrap_content"
         android:text="Forgot Password?"
-app:layout_constraintTop_toBottomOf="@id/eTPassword"
         android:textColor="@color/black"
         android:textSize="@dimen/font_height"
         app:layout_constraintEnd_toEndOf="@id/gdEnd"
+        app:layout_constraintTop_toBottomOf="@id/eTPassword"
 
         />
 
@@ -130,29 +131,29 @@ app:layout_constraintTop_toBottomOf="@id/eTPassword"
 
         android:layout_height="wrap_content"
         android:text="or"
-app:layout_constraintTop_toBottomOf="@id/eTPassword"
-        app:layout_constraintBottom_toTopOf="@id/btnToGoogleAccount"
-
         android:textColor="@color/black"
         android:textSize="@dimen/font_height"
+
+        app:layout_constraintBottom_toTopOf="@id/btnToGoogleAccount"
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
         app:layout_constraintStart_toStartOf="@id/gdStart"
-        app:layout_constraintEnd_toEndOf="@id/gdEnd"/>
+        app:layout_constraintTop_toBottomOf="@id/eTPassword" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnToGoogleAccount"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/shape_white"
         android:drawableStart="@drawable/ic_google"
         android:inputType="textCapSentences"
         android:paddingStart="25dp"
         android:text="Continue with Google account"
-        app:layout_constraintTop_toBottomOf="@id/tVOr"
         app:layout_constraintBottom_toTopOf="@id/btnRed"
-        app:layout_constraintStart_toStartOf="@id/gdStart"
         app:layout_constraintEnd_toEndOf="@id/gdEnd"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="@id/gdStart"
+        app:layout_constraintTop_toBottomOf="@id/tVOr"
 
         />
 
@@ -160,19 +161,18 @@ app:layout_constraintTop_toBottomOf="@id/eTPassword"
         android:id="@+id/btnRed"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/shape_button_red"
         android:fontFamily="@font/tisk"
         android:inputType="textCapSentences"
         android:text="Sign In"
         android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/btnToGoogleAccount"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:textSize="35sp"
-        app:layout_constraintStart_toStartOf="@id/gdStart"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/gdEnd"
-        android:layout_marginBottom="50dp"
-        android:layout_marginTop="50dp"
-        />
+        app:layout_constraintStart_toStartOf="@id/gdStart"
+        app:layout_constraintTop_toBottomOf="@id/btnToGoogleAccount" />
 
 
     <androidx.constraintlayout.widget.Guideline
