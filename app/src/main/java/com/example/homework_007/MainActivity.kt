@@ -17,25 +17,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        binding.eTPassword.setOnClickListener {
 
-
-
-           }
 
         binding.btnRed.setOnClickListener {
-            if (!binding.eTEmail.text.toString().isEmail()){
+            if (!binding.eTEmail.text.toString().isEmail()) {
                 binding.eTEmail.error = getString(R.string.wrong_email)
             }
         }
 
 
-
-
-        }
-
-
-
+    }
 
 
 }

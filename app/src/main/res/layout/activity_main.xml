@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/california_sun"
-        android:text="Welcome"
+        android:text="@string/welcome"
         android:textColor="@color/black"
         android:textSize="60sp"
         app:layout_constraintBottom_toTopOf="@id/tVTo"
@@ -26,7 +26,7 @@
         android:id="@+id/tVTo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="To"
+        android:text="@string/to"
 
         android:textColor="@color/black"
 
@@ -41,34 +41,46 @@
         android:id="@+id/iVLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/tvSharemac"
+        app:layout_constraintBottom_toTopOf="@id/tvShare"
         app:layout_constraintEnd_toEndOf="@id/gdEnd"
         app:layout_constraintStart_toStartOf="@id/gdStart"
         app:layout_constraintTop_toBottomOf="@id/tVTo"
         app:srcCompat="@drawable/ic_sam_logo" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvSharemac"
+        android:id="@+id/tvShare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/terminator"
-        android:text="SHAREMAC"
+        android:text="@string/share"
         android:textColor="@color/black"
         android:textSize="24sp"
-
-
         app:layout_constraintBottom_toTopOf="@id/tVServiceApp"
-
-
-        app:layout_constraintEnd_toEndOf="@id/gdEnd"
+        app:layout_constraintEnd_toStartOf="@id/tvMac"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@id/gdStart"
         app:layout_constraintTop_toBottomOf="@id/iVLogo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/terminator"
+        android:text="@string/mac"
+        android:textColor="@color/logoColor"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/tVServiceApp"
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
+        app:layout_constraintStart_toEndOf="@id/tvShare"
+        app:layout_constraintTop_toBottomOf="@id/iVLogo"
+
+        />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tVServiceApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Service App"
+        android:text="@string/service_app"
         android:textColor="@color/black"
         android:textSize="@dimen/font_height"
 
@@ -76,7 +88,7 @@
         app:layout_constraintBottom_toTopOf="@id/eTEmail"
         app:layout_constraintEnd_toEndOf="@id/gdEnd"
         app:layout_constraintStart_toStartOf="@id/gdStart"
-        app:layout_constraintTop_toBottomOf="@id/tvSharemac" />
+        app:layout_constraintTop_toBottomOf="@id/tvShare" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/eTEmail"
@@ -85,12 +97,12 @@
         android:background="@drawable/shape_white"
         android:drawableStart="@drawable/ic_email"
         android:hint="  Email"
+        android:inputType="text"
         android:paddingStart="20dp"
         app:layout_constraintBottom_toTopOf="@id/eTPassword"
         app:layout_constraintEnd_toEndOf="@id/gdEnd"
         app:layout_constraintStart_toStartOf="@id/gdStart"
         app:layout_constraintTop_toBottomOf="@id/tVServiceApp"
-        android:inputType="text"
 
 
         />
@@ -109,7 +121,9 @@
         app:layout_constraintBottom_toTopOf="@id/tVOr"
         app:layout_constraintEnd_toEndOf="@id/gdEnd"
         app:layout_constraintStart_toStartOf="@id/gdStart"
-        app:layout_constraintTop_toBottomOf="@id/eTEmail" />
+        app:layout_constraintTop_toBottomOf="@id/eTEmail"
+
+        />
 
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -117,7 +131,7 @@
         android:layout_width="wrap_content"
 
         android:layout_height="wrap_content"
-        android:text="Forgot Password?"
+        android:text="@string/forgot_password"
         android:textColor="@color/black"
         android:textSize="@dimen/font_height"
         app:layout_constraintEnd_toEndOf="@id/gdEnd"
@@ -130,7 +144,7 @@
         android:layout_width="wrap_content"
 
         android:layout_height="wrap_content"
-        android:text="or"
+        android:text="@string/or"
         android:textColor="@color/black"
         android:textSize="@dimen/font_height"
 
@@ -149,7 +163,7 @@
         android:drawableStart="@drawable/ic_google"
         android:inputType="textCapSentences"
         android:paddingStart="25dp"
-        android:text="Continue with Google account"
+        android:text="@string/continue_with_google_account"
         app:layout_constraintBottom_toTopOf="@id/btnRed"
         app:layout_constraintEnd_toEndOf="@id/gdEnd"
         app:layout_constraintStart_toStartOf="@id/gdStart"
@@ -164,11 +178,11 @@
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/shape_button_red"
-        android:fontFamily="@font/tisk"
+        android:fontFamily="@font/california_sun"
         android:inputType="textCapSentences"
-        android:text="Sign In"
+        android:text="@string/sign_in"
         android:textColor="@color/white"
-        android:textSize="35sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/gdEnd"
         app:layout_constraintStart_toStartOf="@id/gdStart"
